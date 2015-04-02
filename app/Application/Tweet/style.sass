@@ -1,0 +1,40 @@
+@import ../../_variables
+
+.TweetComponent
+  display: flex
+  flex-flow: column
+  padding: 10px 10px 0
+  border-bottom: 1px solid $twitter-gray
+
+  &:last-child
+    border: 0
+
+.TweetComponent-header
+  display: flex
+
+.TweetComponent-user
+  display: flex
+  flex-flow: column
+  justify-content: center
+  padding-left: 10px
+
+.TweetComponent-name
+  font-size: 1em
+  font-weight: bold
+  margin-bottom: .3em
+
+.TweetComponent-username
+  font-size: .8em
+  color: $twitter-darker-gray
+
+  &:before
+    content: '@'
+
+.TweetComponent-tweet
+  padding: 10px 0
+  line-height: 1.2em
+
+@media screen and (max-width: 479px)
+  .TweetComponent img
+    width: 24px
+    height: 24px

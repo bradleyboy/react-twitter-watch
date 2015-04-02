@@ -1,0 +1,23 @@
+@import ../../_variables
+
+.DashboardComponent
+  display: flex
+  flex: 1
+  transition: flex 400ms
+
+@media screen and (max-width: 479px)
+  .DashboardComponent
+    flex-flow: column
+
+.DashboardComponent.is-hidden
+  flex: 0
+
+.DashboardComponent.is-waiting
+  align-items: center
+  justify-content: center
+  font-size: 2em
+  color: $twitter-darker-gray
+
+@media screen and (max-width: 479px)
+  .DashboardComponent.is-waiting
+    font-size: 1em

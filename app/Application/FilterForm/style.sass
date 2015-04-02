@@ -1,0 +1,61 @@
+@import ../../_variables
+
+.FilterFormComponent
+  width: 100%
+  display: flex
+  padding: 20px
+  background: $twitter-black
+  align-items: center
+  flex: 0 0 1
+  transition: flex 400ms
+  color: $twitter-light-gray
+  font-size: 25px
+
+.FilterFormComponent.is-full
+  flex: 1
+
+.FilterFormComponent input
+  flex: 1
+  outline: 0
+  padding: 10px
+  transition: border-color 400ms
+  font-size: 25px
+  color: $twitter-light-gray
+  background: $twitter-darkest-gray
+  border: 0
+  transition: all 400ms
+  border-radius: 2px
+  margin-left: 10px
+
+  &:focus
+    background: $twitter-light-gray
+    color: $twitter-darkest-gray
+
+.FilterFormComponent button
+  border: 0
+  background: $twitter-blue
+  margin-left: 10px
+  padding: 16px 40px
+  color: $twitter-light-gray
+  font-size: 15px
+  border-radius: 4px
+  font-weight: bold
+  cursor: pointer
+
+.FilterFormComponent.is-full
+  flex: 1
+
+@media screen and (max-width: 479px)
+  .FilterFormComponent-label
+    display: none
+
+  .FilterFormComponent
+    padding: 10px
+
+  .FilterFormComponent input
+    margin: 0
+    font-size: 18px
+
+  .FilterFormComponent button
+    padding: 13px 20px
+    font-size: 13px

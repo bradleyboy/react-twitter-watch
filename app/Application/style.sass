@@ -1,0 +1,50 @@
+@import ../_variables
+
+*
+  box-sizing: border-box
+
+body
+  font-family: "Helvetica Neue"
+  color: $twitter-black
+  font-size: 90%
+
+a
+  color: $twitter-blue
+
+html, body, #app
+  height: 100%
+
+.ApplicationComponent
+  height: 100%
+  display: flex
+  flex-flow: column
+
+.u-column
+  padding: 10px 10px 0
+  display: flex
+  flex-flow: column
+
+  &:first-child
+    padding-right: 0
+
+  &:last-child
+    padding-left: 0
+
+.u-column-header
+  color: $twitter-black
+  font-weight: bold
+  text-align: center
+  padding: 10px 0
+  font-size: 110%
+  border-bottom: 1px solid $twitter-blue
+
+.u-column-main
+  flex: 1
+  position: relative
+
+@media screen and (max-width: 479px)
+  .u-column
+    padding: 0
+
+  .u-column-header
+    display: none

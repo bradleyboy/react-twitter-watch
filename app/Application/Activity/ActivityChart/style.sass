@@ -1,0 +1,29 @@
+@import ../../../_variables
+
+.ActivityChartComponent
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: flex-end
+  position: absolute
+  background: $twitter-light-gray
+
+.ActivityChartComponent-bar
+  background: $twitter-gray
+  display: flex
+  transform-origin: 0 100%
+  flex: 0 0 3.333%
+  transition: flex 4s linear
+
+.ActivityChartComponent-bar.scale-enter
+  flex: 0 0 0
+
+.ActivityChartComponent-bar.scale-enter.scale-enter-active
+  flex: 0 0 3.333%
+
+.ActivityChartComponent-bar.scale-leave
+  flex: 0 0 3.333%
+
+.ActivityChartComponent-bar.scale-leave.scale-leave-active
+  flex: 0 0 0
+

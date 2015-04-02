@@ -1,0 +1,48 @@
+@import ../../_variables
+
+.HashtagListComponent
+  flex: 0 0 30%
+
+.HashtagListComponent-list
+  flex: 1
+  display: flex
+  flex-flow: column
+  justify-content: flex-start
+  padding: 0 10px
+
+.HashtagListComponent-item
+  flex: 1
+  display: flex
+  align-items: center
+
+.HashtagListComponent-item-title
+  flex: 1
+  font-weight: bold
+
+  &:before
+    content: '#'
+    color: $twitter-darker-gray
+    padding-right: 1px
+    font-weight: normal
+
+.HashtagListComponent-item-count
+  background: $twitter-light-gray
+  padding: 3px 6px
+  border-radius: 6px
+  font-size: 85%
+
+@media screen and (max-width: 479px)
+  .HashtagListComponent
+    flex: 1
+    background: $twitter-black
+    color: $twitter-dark-gray
+
+  .HashtagListComponent-item
+    display: none
+
+  .HashtagListComponent-item:nth-child(-n+3)
+    display: flex
+
+  .HashtagListComponent-item-count
+    background: $twitter-darkest-gray
+    color: $twitter-light-gray
